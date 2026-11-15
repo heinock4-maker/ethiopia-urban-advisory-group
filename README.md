@@ -155,7 +155,7 @@ All content lives in `index.html`.
 
 - **Colours and fonts:** Edit the `tailwind.config` block in the document head. Colour names such as `slatecharcoal`, `sandstone`, and `archgold`, and the `serif` and `sans` font families, are defined there.
 
-- **Contact details:** The current Get In Touch details are Bole Sub-City, Addis Ababa, Ethiopia, 1000, heinock4@gmail.com, +251 91 178 0344, and +251 90 080 3030. The same details also appear in the top utility bar and the footer, so update all three places together.
+- **Contact details:** The current Get In Touch details are Bole Sub-City, Addis Ababa, Ethiopia, 1000, etuabg@gmail.com, +251 91 178 0344, and +251 90 080 3030. The same details also appear in the top utility bar and the footer, so update all three places together.
 
 - **Images:** Project and stewardship images are remote Unsplash URLs with an automatic placeholder fallback if an image fails to load. To use a local image instead, place it in `assets/` and reference it with a relative path such as `assets/project-name.jpg`.
 
@@ -186,7 +186,7 @@ The same folder can also be dragged into Netlify or Vercel, or copied to any web
 **Ethiopia Urban Advisory and Building Group**
 Bole Sub-City, Addis Ababa, Ethiopia, 1000
 
-- Email: heinock4@gmail.com
+- Email: etuabg@gmail.com
 - Phone: +251 91 178 0344 / +251 90 080 3030
 - Principal Consultant: Heinock Balemual Adane
 
