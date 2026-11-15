@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethiopia Urban Advisory and Building Group | Land Entitlements, Planning & Architecture</title>
+    <meta name="description" content="Ethiopia Urban Advisory and Building Group guides complex land entitlements, urban planning, municipal permitting, and architectural building delivery across Ethiopia.">
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slatecharcoal: '#16202A',
+                        slatedeep: '#0F171F',
+                        sandstone: '#F7F6F2',
+                        sanddark: '#ECEAE2',
+                        archgold: '#B38B59',
+                        archgoldlight: '#C9A576',
+                        ink: '#1E293B',
+                        mutedink: '#52606D'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Inter"', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .blueprint-grid {
+            background-size: 48px 48px;
+            background-image:
+                linear-gradient(to right, rgba(179, 139, 89, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(179, 139, 89, 0.08) 1px, transparent 1px);
+        }
+        .blueprint-grid-light {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(to right, rgba(22, 32, 42, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(22, 32, 42, 0.04) 1px, transparent 1px);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #F7F6F2; }
+        ::-webkit-scrollbar-thumb { background: #16202A; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #B38B59; }
+        .hidden { display: none !important; }
+    </style>
+</head>
+<body class="bg-sandstone text-ink font-sans antialiased selection:bg-archgold selection:text-white overflow-x-hidden">
+
+    <!-- Top Utility Bar -->
+    <div class="bg-slatedeep text-gray-300 text-xs py-2 border-b border-white/10 hidden md:block">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fa-solid fa-location-dot text-archgold mr-2"></i>Bole Sub-City, Addis Ababa, Ethiopia, 1000</span>
+                <a href="mailto:heinock4@gmail.com" class="hover:text-archgold transition"><i class="fa-solid fa-envelope text-archgold mr-2"></i>heinock4@gmail.com</a>
+                <a href="tel:+251911780344" class="hover:text-archgold transition"><i class="fa-solid fa-phone text-archgold mr-2"></i>+251 91 178 0344</a>
+                <a href="tel:+251900803030" class="hover:text-archgold transition">+251 90 080 3030</a>
+            </div>
+            <div class="text-gray-400 tracking-wider uppercase text-[11px]">
+                Urban Land Administration &bull; Architectural Delivery &bull; Regulatory Advisory
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header id="navbar" class="sticky top-0 z-40 bg-sandstone/95 backdrop-blur-md border-b border-slatecharcoal/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#" class="flex items-center space-x-3 group focus:outline-none">
+                    <div class="w-11 h-11 bg-slatecharcoal rounded-lg flex items-center justify-center border border-archgold/40 group-hover:border-archgold transition shadow-sm shrink-0">
+                        <svg class="w-6 h-6 text-archgold" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M4 27H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M7 27V11L16 5L25 11V27" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M12 27V17H20V27" stroke="#F7F6F2" stroke-width="1.75" stroke-linejoin="round"/>
+                            <path d="M16 5V13" stroke="#F7F6F2" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="block font-serif text-base sm:text-lg font-bold text-slatecharcoal tracking-tight">Ethiopia Urban Advisory</span>
+                        <span class="block text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-archgold">&amp; Building Group</span>
+                    </div>
+                </a>
+
+                <nav class="hidden xl:flex items-center space-x-7 text-sm font-medium text-slatecharcoal" aria-label="Primary">
+                    <a href="#expertise" class="hover:text-archgold transition py-2">Expertise</a>
+                    <a href="#public-hearings" class="hover:text-archgold transition py-2">Public Hearings</a>
+                    <a href="#past-projects" class="hover:text-archgold transition py-2">Past Projects</a>
+                    <a href="#community-stewardship" class="hover:text-archgold transition py-2">Community Stewardship</a>
+                    <a href="#about-us" class="hover:text-archgold transition py-2">About Us</a>
+                    <a href="#contact-us" class="hover:text-archgold transition py-2">Contact Us</a>
+                    <button onclick="openModal('loginModal')" class="ml-2 px-4 py-2 rounded-lg border border-slatecharcoal text-slatecharcoal hover:bg-slatecharcoal hover:text-white transition font-semibold text-xs uppercase tracking-wider flex items-center gap-2" style="min-height:36px">
+                        <i class="fa-solid fa-lock text-archgold"></i> Login
+                    </button>
+                </nav>
+
+                <div class="flex items-center gap-3 xl:hidden">
+                    <button onclick="openModal('loginModal')" class="px-3 py-2 rounded-lg border border-slatecharcoal/30 text-slatecharcoal text-xs font-semibold uppercase tracking-wider" style="min-height:36px">
+                        Login
+                    </button>
+                    <button id="mobileMenuBtn" aria-label="Toggle Menu" aria-expanded="false" class="p-2.5 rounded-lg text-slatecharcoal hover:bg-sanddark focus:outline-none" style="min-width:44px;min-height:44px">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden xl:hidden bg-sandstone border-t border-slatecharcoal/10 px-6 py-5 space-y-3 shadow-lg">
+            <a href="#expertise" class="mobile-nav-link block py-2 text-base font-medium text-slatecharcoal hover:text-archgold">Expertise</a>
+            <a href="#public-hearings" class="mobile-nav-link block py-2 text-base font-medium text-slatecharcoal hover:text-archgold">Public Hearings</a>
+            <a href="#past-projects" class="mobile-nav-link block py-2 text-base font-medium text-slatecharcoal hover:text-archgold">Past Projects</a>
+            <a href="#community-stewardship" class="mobile-nav-link block py-2 text-base font-medium text-slatecharcoal hover:text-archgold">Community Stewardship</a>
+            <a href="#about-us" class="mobile-nav-link block py-2 text-base font-medium text-slatecharcoal hover:text-archgold">About Us</a>
+            <a href="#contact-us" class="mobile-nav-link block py-2 text-base font-medium text-slatecharcoal hover:text-archgold">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative bg-slatecharcoal text-white overflow-hidden blueprint-grid">
+        <svg class="absolute right-0 top-0 h-full w-1/2 opacity-10 pointer-events-none hidden lg:block" viewBox="0 0 600 800" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="450" cy="200" r="280" stroke="#B38B59" stroke-width="1.5" stroke-dasharray="6 6"/>
+            <rect x="180" y="120" width="360" height="560" stroke="#F7F6F2" stroke-width="1"/>
+            <line x1="180" y1="300" x2="540" y2="300" stroke="#B38B59" stroke-width="1"/>
+            <line x1="360" y1="120" x2="360" y2="680" stroke="#F7F6F2" stroke-width="1"/>
+            <path d="M180 680L360 300L540 680" stroke="#B38B59" stroke-width="1.5"/>
+        </svg>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-archgold/40 text-archgoldlight text-xs font-semibold uppercase tracking-widest mb-6">
+                    <span class="w-2 h-2 rounded-full bg-archgold"></span>
+                    Addis Ababa &amp; Regional Development Advisory
+                </div>
+                <h1 class="font-serif text-3xl sm:text-5xl lg:text-[54px] font-bold leading-[1.15] tracking-tight text-white mb-6">
+                    Guiding Complex Land Entitlements, Urban Planning &amp; Building Delivery Across Ethiopia
+                </h1>
+                <p class="text-base sm:text-lg text-gray-300 leading-relaxed mb-10 max-w-2xl font-light">
+                    From municipal permitting and cadastral land administration in Addis Ababa to architectural design, spatial GIS analysis, and construction oversight—we bridge regulatory clarity with enduring built environments.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#past-projects" class="px-7 py-4 rounded-lg bg-archgold hover:bg-archgoldlight text-slatecharcoal font-semibold text-sm uppercase tracking-wider text-center transition shadow-lg inline-flex items-center justify-center" style="min-height:48px">
+                        Explore Past Projects
+                    </a>
+                    <a href="#contact-us" class="px-7 py-4 rounded-lg bg-transparent border border-white/30 hover:border-archgold hover:text-archgold text-white font-semibold text-sm uppercase tracking-wider text-center transition inline-flex items-center justify-center" style="min-height:48px">
+                        Schedule Consultation
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-10 border-t border-white/15">
+                <div>
+                    <p class="text-archgold font-serif text-xl sm:text-2xl font-bold">Land Entitlements</p>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-1">Sub-City &amp; Municipal Approvals</p>
+                </div>
+                <div>
+                    <p class="text-archgold font-serif text-xl sm:text-2xl font-bold">Urban Planning</p>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-1">Structural &amp; Cadastral Alignment</p>
+                </div>
+                <div>
+                    <p class="text-archgold font-serif text-xl sm:text-2xl font-bold">Design &amp; CAD</p>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-1">AutoCAD, ArchiCAD &amp; QGIS Workflows</p>
+                </div>
+                <div>
+                    <p class="text-archgold font-serif text-xl sm:text-2xl font-bold">Project Delivery</p>
+                    <p class="text-xs sm:text-sm text-gray-400 mt-1">On-Time Construction Oversight</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. EXPERTISE SECTION -->
+    <section id="expertise" class="py-20 sm:py-24 bg-sandstone blueprint-grid-light border-b border-slatecharcoal/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mb-14">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-archgold block mb-3">Core Capabilities</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slatecharcoal mb-4">Multidisciplinary Expertise Across the Development Lifecycle</h2>
+                <p class="text-mutedink text-base sm:text-lg leading-relaxed">
+                    We partner with private developers, institutional investors, and public agencies to de-risk land acquisition, secure statutory entitlements, and execute disciplined building delivery.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+                <div class="bg-white rounded-xl p-8 border border-slatecharcoal/10 hover:border-archgold transition duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-file-signature"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-slatecharcoal mb-3">Land Development Entitlements &amp; Permitting</h3>
+                        <p class="text-mutedink text-sm leading-relaxed mb-4">End-to-end navigation of sub-city construction permits, zoning compliance reviews, lease administration clearances, and municipal building approvals.</p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 text-xs font-semibold text-archgold uppercase tracking-wider">Sub-City &amp; Municipal Approvals</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 border border-slatecharcoal/10 hover:border-archgold transition duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-map-location-dot"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-slatecharcoal mb-3">Urban Planning &amp; Master Plans</h3>
+                        <p class="text-mutedink text-sm leading-relaxed mb-4">Preparation of neighborhood structural plans, site subdivision layouts, land administration alignment, and spatial GIS mapping using QGIS.</p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 text-xs font-semibold text-archgold uppercase tracking-wider">Spatial &amp; Cadastral Planning</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 border border-slatecharcoal/10 hover:border-archgold transition duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-leaf"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-slatecharcoal mb-3">Environmental &amp; Social Impact Assessment</h3>
+                        <p class="text-mutedink text-sm leading-relaxed mb-4">Coordination of statutory ESIA documentation, environmental authority clearances, mitigation planning, and sustainable land-use compliance.</p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 text-xs font-semibold text-archgold uppercase tracking-wider">ESIA &amp; Regulatory Clearance</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 border border-slatecharcoal/10 hover:border-archgold transition duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-slatecharcoal mb-3">Architectural &amp; Landscape Design</h3>
+                        <p class="text-mutedink text-sm leading-relaxed mb-4">Comprehensive design for residential estates, mixed-use developments, civic buildings, and public parks delivered via AutoCAD and ArchiCAD.</p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 text-xs font-semibold text-archgold uppercase tracking-wider">AutoCAD &amp; ArchiCAD Documentation</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 border border-slatecharcoal/10 hover:border-archgold transition duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-helmet-safety"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-slatecharcoal mb-3">Construction Management &amp; On-Time Delivery</h3>
+                        <p class="text-mutedink text-sm leading-relaxed mb-4">Rigorous site supervision, contractor coordination, bill-of-quantities verification, and quality control ensuring budget and schedule certainty.</p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 text-xs font-semibold text-archgold uppercase tracking-wider">Quality Control &amp; Site Supervision</div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 border border-slatecharcoal/10 hover:border-archgold transition duration-300 shadow-sm hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center mb-6 text-xl"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-slatecharcoal mb-3">Feasibility, Due Diligence &amp; Land Valuation</h3>
+                        <p class="text-mutedink text-sm leading-relaxed mb-4">Pre-acquisition title verification, right-of-way spatial checks, highest-and-best-use studies, and development feasibility advisory.</p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 text-xs font-semibold text-archgold uppercase tracking-wider">Acquisition &amp; Spatial Due Diligence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PUBLIC HEARINGS & REGULATORY NAVIGATION -->
+    <section id="public-hearings" class="py-20 sm:py-24 bg-white border-b border-slatecharcoal/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-archgold block mb-3">Public Hearings &amp; Governance</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slatecharcoal mb-6">Navigating Municipal Reviews &amp; Stakeholder Consultations</h2>
+                    <p class="text-mutedink text-base leading-relaxed mb-6">
+                        Major urban developments succeed when technical rigor is paired with transparent institutional and community alignment. We represent project sponsors through sub-city technical committees, municipal planning boards, and neighborhood public consultations.
+                    </p>
+                    <ul class="space-y-4 text-sm text-ink">
+                        <li class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-archgold/15 text-archgold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></span>
+                            <span><strong>Sub-City &amp; Municipal Board Presentations:</strong> Clear architectural visualizations, zoning compliance matrices, and regulatory briefs tailored for review officials.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-archgold/15 text-archgold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></span>
+                            <span><strong>Public Outreach &amp; Community Alignment:</strong> Structured neighborhood consultations that address infrastructure, access, and environmental concerns early.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-6 h-6 rounded-full bg-archgold/15 text-archgold flex items-center justify-center shrink-0 mt-0.5"><i class="fa-solid fa-check text-xs"></i></span>
+                            <span><strong>Statutory &amp; Cadastral Verification:</strong> Cross-checking parcel boundaries, master plan road corridors, and lease stipulations before submission.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-6 bg-slatecharcoal text-white rounded-2xl p-8 sm:p-10 shadow-xl blueprint-grid">
+                    <h3 class="font-serif text-2xl font-bold text-white mb-2">Entitlement &amp; Approval Workflow</h3>
+                    <p class="text-gray-400 text-sm mb-8">Structured progression from initial parcel audit to construction release.</p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-9 h-9 rounded-lg bg-archgold text-slatecharcoal font-bold flex items-center justify-center shrink-0 text-sm">01</div>
+                            <div>
+                                <h4 class="font-semibold text-white text-base">Cadastral &amp; Zoning Diagnostic</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-1">Verify title deed, land-use classification, height limits, and GIS corridor setbacks.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-9 h-9 rounded-lg bg-archgold text-slatecharcoal font-bold flex items-center justify-center shrink-0 text-sm">02</div>
+                            <div>
+                                <h4 class="font-semibold text-white text-base">Technical Dossier &amp; ESIA Preparation</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-1">Compile architectural drawings, structural/MEP coordination, and environmental clearances.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-9 h-9 rounded-lg bg-archgold text-slatecharcoal font-bold flex items-center justify-center shrink-0 text-sm">03</div>
+                            <div>
+                                <h4 class="font-semibold text-white text-base">Public Consultation &amp; Board Hearing</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-1">Lead stakeholder disclosures and respond directly to municipal review committee feedback.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-9 h-9 rounded-lg bg-archgold text-slatecharcoal font-bold flex items-center justify-center shrink-0 text-sm">04</div>
+                            <div>
+                                <h4 class="font-semibold text-white text-base">Permit Issuance &amp; Site Mobilization</h4>
+                                <p class="text-gray-400 text-xs sm:text-sm mt-1">Secure stamped building permits and transition smoothly into supervised construction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PORTFOLIO SHOWCASE / PAST PROJECTS -->
+    <section id="past-projects" class="py-20 sm:py-24 bg-sandstone border-b border-slatecharcoal/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-archgold block mb-3">Portfolio Showcase</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slatecharcoal mb-4">Past Projects</h2>
+                <p class="text-mutedink text-base sm:text-lg leading-relaxed mb-4">
+                    A look at the projects we've guided through entitlements, planning, and development—delivering results that create lasting community value.
+                </p>
+                <p class="text-sm text-mutedink/90">
+                    Our portfolio reflects experience in residential communities, land development entitlements, land use approvals, complex entitlements, construction management, and on-time delivery.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2.5 mb-12" id="projectFilters">
+                <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition bg-slatecharcoal text-white shadow-sm" style="min-height:40px">All Projects</button>
+                <button data-filter="Entitlement" class="filter-btn px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition bg-white text-slatecharcoal border border-slatecharcoal/15 hover:border-archgold" style="min-height:40px">Entitlement</button>
+                <button data-filter="Project Management" class="filter-btn px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition bg-white text-slatecharcoal border border-slatecharcoal/15 hover:border-archgold" style="min-height:40px">Project Management</button>
+                <button data-filter="Acquisition & Due Diligence" class="filter-btn px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition bg-white text-slatecharcoal border border-slatecharcoal/15 hover:border-archgold" style="min-height:40px">Acquisition &amp; Due Diligence</button>
+                <button data-filter="Building & Landscape" class="filter-btn px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold uppercase tracking-wider transition bg-white text-slatecharcoal border border-slatecharcoal/15 hover:border-archgold" style="min-height:40px">Building &amp; Landscape</button>
+            </div>
+
+            <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- 5. COMMUNITY STEWARDSHIP -->
+    <section id="community-stewardship" class="py-20 sm:py-24 bg-white border-b border-slatecharcoal/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="rounded-2xl overflow-hidden shadow-lg border border-slatecharcoal/10 bg-slatecharcoal">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='https://placehold.co/900x650/16202A/B38B59?text=Sustainable+Urban+Green+Spaces';" alt="Sustainable Urban Planning and Green Infrastructure" class="w-full h-80 sm:h-96 object-cover opacity-90">
+                        <div class="p-6 bg-slatecharcoal text-white">
+                            <p class="text-xs uppercase tracking-widest text-archgold font-semibold mb-1">Civic &amp; Ecological Responsibility</p>
+                            <p class="text-sm text-gray-300">Integrating walkable streetscapes, storm-water resilience, and accessible public parks into every master plan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 order-1 lg:order-2">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-archgold block mb-3">Community Stewardship</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slatecharcoal mb-6">Building Resilient Neighborhoods &amp; Lasting Public Value</h2>
+                    <p class="text-mutedink text-base leading-relaxed mb-6">
+                        At Ethiopia Urban Advisory and Building Group, land development is inseparable from civic stewardship. Rapid urbanization in Addis Ababa and regional centers demands thoughtful integration of green corridors, pedestrian connectivity, and inclusive community amenities.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="p-5 rounded-xl bg-sandstone border border-slatecharcoal/10">
+                            <h3 class="font-serif text-lg font-bold text-slatecharcoal mb-2">Urban Green &amp; Park Integration</h3>
+                            <p class="text-xs sm:text-sm text-mutedink leading-relaxed">Designing recreational parks, native tree buffers, and permeable public plazas that enhance urban microclimates.</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-sandstone border border-slatecharcoal/10">
+                            <h3 class="font-serif text-lg font-bold text-slatecharcoal mb-2">Participatory Neighborhood Planning</h3>
+                            <p class="text-xs sm:text-sm text-mutedink leading-relaxed">Facilitating transparent dialogue among local residents, municipal authorities, and project teams to foster shared trust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT US SECTION -->
+    <section id="about-us" class="py-20 sm:py-24 bg-sandstone border-b border-slatecharcoal/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-archgold block mb-3">About Us</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slatecharcoal mb-6">Multidisciplinary Leadership in Urban Land Administration &amp; Architecture</h2>
+                    <p class="text-mutedink text-base leading-relaxed mb-5">
+                        Headquartered in Bole Sub-City, Addis Ababa, <strong>Ethiopia Urban Advisory and Building Group</strong> brings together advanced academic and practical expertise in Urban Land Administration and Management, Architectural &amp; Landscape Design, and GIS Spatial Analysis.
+                    </p>
+                    <p class="text-mutedink text-base leading-relaxed mb-8">
+                        We bridge the gap between policy-level land governance and ground-level construction execution. Whether guiding a private residential estate through sub-city permitting or advising on large-scale municipal corridor redevelopment, our work is grounded in technical precision, regulatory integrity, and practical delivery.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-slatecharcoal/15">
+                        <div class="bg-white p-5 rounded-xl border border-slatecharcoal/10">
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-archgold">15+ Years</span>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slatecharcoal mt-1 block">Design &amp; Regulatory Experience</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slatecharcoal/10">
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-archgold">Full Lifecycle</span>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slatecharcoal mt-1 block">Entitlement to Construction</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border border-slatecharcoal/10">
+                            <span class="block font-serif text-2xl sm:text-3xl font-bold text-archgold">CAD &amp; GIS</span>
+                            <span class="text-xs font-semibold uppercase tracking-wider text-slatecharcoal mt-1 block">AutoCAD, ArchiCAD &amp; QGIS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-white p-8 rounded-2xl border border-slatecharcoal/10 shadow-sm">
+                    <h3 class="font-serif text-xl font-bold text-slatecharcoal mb-4">Our Advisory Standards</h3>
+                    <div class="space-y-4 text-sm text-mutedink">
+                        <div class="pb-4 border-b border-gray-100">
+                            <p class="font-semibold text-slatecharcoal mb-1"><i class="fa-solid fa-scale-balanced text-archgold mr-2"></i>Regulatory Precision</p>
+                            <p>Strict alignment with Ethiopian urban land lease proclamations, building codes, and municipal master plans.</p>
+                        </div>
+                        <div class="pb-4 border-b border-gray-100">
+                            <p class="font-semibold text-slatecharcoal mb-1"><i class="fa-solid fa-layer-group text-archgold mr-2"></i>Spatial &amp; Technical Rigor</p>
+                            <p>Integrated CAD drafting, architectural modeling, and geospatial verification for error-free submissions.</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-slatecharcoal mb-1"><i class="fa-solid fa-handshake text-archgold mr-2"></i>Transparent Client Advocacy</p>
+                            <p>Clear milestone reporting, realistic permitting timelines, and proactive risk mitigation from day one.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. EDITORIAL BANNER QUOTE -->
+    <section class="py-20 sm:py-24 bg-slatecharcoal text-white relative overflow-hidden blueprint-grid">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+            <i class="fa-solid fa-quote-left text-archgold text-3xl sm:text-4xl mb-6 opacity-80"></i>
+            <blockquote class="font-serif text-2xl sm:text-4xl lg:text-[42px] font-medium leading-snug text-white mb-6">“Comprehensive planning and management are at the heart of every successful project.”</blockquote>
+            <div class="w-16 h-0.5 bg-archgold mx-auto mb-4"></div>
+            <p class="text-xs uppercase tracking-[0.22em] text-archgoldlight font-semibold">Ethiopia Urban Advisory and Building Group</p>
+        </div>
+    </section>
+
+    <!-- 8. CONTACT US SECTION -->
+    <section id="contact-us" class="py-20 sm:py-24 bg-sandstone">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-archgold block mb-3">Get In Touch</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slatecharcoal mb-5">Discuss Your Land, Planning or Building Project</h2>
+                    <p class="text-mutedink text-base leading-relaxed mb-8">Connect with our advisory team in Addis Ababa to schedule an initial entitlement review, architectural consultation, or land due-diligence briefing.</p>
+
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wider text-mutedink">Telephone</p>
+                                <a href="tel:+251911780344" class="block text-base font-semibold text-slatecharcoal hover:text-archgold transition">+251 91 178 0344</a>
+                                <a href="tel:+251900803030" class="block text-base font-semibold text-slatecharcoal hover:text-archgold transition">+251 90 080 3030</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></div>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wider text-mutedink">Office Location</p>
+                                <p class="text-base font-semibold text-slatecharcoal">Bole Sub-City, Addis Ababa, Ethiopia, 1000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-11 h-11 rounded-lg bg-slatecharcoal text-archgold flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-wider text-mutedink">Email Inquiries</p>
+                                <a href="mailto:heinock4@gmail.com" class="text-base font-semibold text-slatecharcoal hover:text-archgold transition">heinock4@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl border border-slatecharcoal/10 shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold text-slatecharcoal mb-6">Project Consultation Request</h3>
+
+                    <form id="contactForm" class="space-y-5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="fullName" class="block text-xs font-semibold uppercase tracking-wider text-slatecharcoal mb-2">Full Name *</label>
+                                <input type="text" id="fullName" required placeholder="e.g., Dawit Bekele" class="w-full px-4 py-3 rounded-lg bg-sandstone border border-slatecharcoal/15 focus:border-archgold focus:bg-white focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label for="emailAddress" class="block text-xs font-semibold uppercase tracking-wider text-slatecharcoal mb-2">Email Address *</label>
+                                <input type="email" id="emailAddress" required placeholder="name@organization.com" class="w-full px-4 py-3 rounded-lg bg-sandstone border border-slatecharcoal/15 focus:border-archgold focus:bg-white focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="projectType" class="block text-xs font-semibold uppercase tracking-wider text-slatecharcoal mb-2">Advisory Service *</label>
+                                <select id="projectType" required class="w-full px-4 py-3 rounded-lg bg-sandstone border border-slatecharcoal/15 focus:border-archgold focus:bg-white focus:outline-none text-sm">
+                                    <option value="">Select service area...</option>
+                                    <option value="Land Development Entitlements">Land Development Entitlements &amp; Permitting</option>
+                                    <option value="Urban Planning & Master Plan">Urban Planning &amp; Master Plan</option>
+                                    <option value="Architectural & Landscape Design">Architectural &amp; Landscape Design</option>
+                                    <option value="Construction Management">Construction Management &amp; Supervision</option>
+                                    <option value="Acquisition & Due Diligence">Acquisition, Valuation &amp; GIS Due Diligence</option>
+                                    <option value="ESIA & Public Hearings">ESIA &amp; Public Hearing Representation</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="subCityLocation" class="block text-xs font-semibold uppercase tracking-wider text-slatecharcoal mb-2">Project Location / Sub-City</label>
+                                <input type="text" id="subCityLocation" placeholder="e.g., Bole, Yeka, Kirkos, or Regional" class="w-full px-4 py-3 rounded-lg bg-sandstone border border-slatecharcoal/15 focus:border-archgold focus:bg-white focus:outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="projectMessage" class="block text-xs font-semibold uppercase tracking-wider text-slatecharcoal mb-2">Project Scope &amp; Objectives *</label>
+                            <textarea id="projectMessage" rows="4" required placeholder="Describe your site, parcel status, permitting needs, or target timeline..." class="w-full px-4 py-3 rounded-lg bg-sandstone border border-slatecharcoal/15 focus:border-archgold focus:bg-white focus:outline-none text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-lg bg-slatecharcoal hover:bg-archgold hover:text-slatecharcoal text-white font-semibold text-xs uppercase tracking-widest transition shadow-md" style="min-height:48px">Submit Inquiry <i class="fa-solid fa-arrow-right ml-2"></i></button>
+                    </form>
+
+                    <div id="formConfirmation" class="hidden mt-6 p-5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-900">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-xl mt-0.5"></i>
+                            <div>
+                                <h4 class="font-bold text-sm">Consultation Inquiry Received</h4>
+                                <p id="confirmationText" class="text-xs sm:text-sm mt-1 text-emerald-800"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slatedeep text-gray-300 pt-16 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+                <div class="lg:col-span-5">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-slatecharcoal rounded-lg flex items-center justify-center border border-archgold/50">
+                            <svg class="w-5 h-5 text-archgold" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M4 27H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M7 27V11L16 5L25 11V27" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M12 27V17H20V27" stroke="#F7F6F2" stroke-width="1.75" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="block font-serif text-lg font-bold text-white">Ethiopia Urban Advisory</span>
+                            <span class="block text-[11px] font-semibold uppercase tracking-[0.18em] text-archgold">&amp; Building Group</span>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed max-w-md">Guiding land entitlements, urban planning, public hearings, architectural design, and construction management across Addis Ababa and Ethiopia.</p>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Navigation</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#expertise" class="hover:text-archgold transition py-1 inline-block">Expertise</a></li>
+                        <li><a href="#public-hearings" class="hover:text-archgold transition py-1 inline-block">Public Hearings</a></li>
+                        <li><a href="#past-projects" class="hover:text-archgold transition py-1 inline-block">Past Projects</a></li>
+                        <li><a href="#community-stewardship" class="hover:text-archgold transition py-1 inline-block">Community Stewardship</a></li>
+                        <li><a href="#about-us" class="hover:text-archgold transition py-1 inline-block">About Us</a></li>
+                        <li><a href="#contact-us" class="hover:text-archgold transition py-1 inline-block">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-4">
+                    <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">Get In Touch</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-archgold w-4"></i><a href="tel:+251911780344" class="hover:text-white transition">+251 91 178 0344</a></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-archgold w-4"></i><a href="tel:+251900803030" class="hover:text-white transition">+251 90 080 3030</a></li>
+                        <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-archgold w-4 mt-1"></i><span>Bole Sub-City, Addis Ababa, Ethiopia, 1000</span></li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-archgold w-4"></i><a href="mailto:heinock4@gmail.com" class="hover:text-white transition">heinock4@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+                <p>Copyright &copy; 2026 Ethiopia Urban Advisory and Building Group - All Rights Reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <button onclick="openModal('privacyModal')" class="hover:text-archgold transition py-2">Privacy Policy</button>
+                    <button onclick="openModal('termsModal')" class="hover:text-archgold transition py-2">Terms &amp; Conditions</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Details Case-Study Modal -->
+    <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slatecharcoal/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slatecharcoal/15">
+            <div class="relative h-56 sm:h-64 bg-slatecharcoal">
+                <img id="modalProjectImg" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" onerror="this.onerror=null;this.src='https://placehold.co/800x500/16202A/B38B59?text=Project+Visual';" alt="Project Visual" class="w-full h-full object-cover">
+                <button onclick="closeModal('projectModal')" aria-label="Close modal" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-slatecharcoal/85 text-white hover:bg-archgold hover:text-slatecharcoal flex items-center justify-center transition"><i class="fa-solid fa-xmark"></i></button>
+                <div class="absolute bottom-4 left-6"><span id="modalProjectCategory" class="px-3 py-1 rounded-md bg-archgold text-slatecharcoal text-xs font-bold uppercase tracking-wider"></span></div>
+            </div>
+            <div class="p-6 sm:p-8">
+                <p id="modalProjectLocation" class="text-xs font-bold uppercase tracking-widest text-archgold mb-1"></p>
+                <h3 id="modalProjectTitle" class="font-serif text-2xl sm:text-3xl font-bold text-slatecharcoal mb-4"></h3>
+                <p id="modalProjectSummary" class="text-mutedink text-sm sm:text-base leading-relaxed mb-6"></p>
+                <div class="bg-sandstone rounded-xl p-5 border border-slatecharcoal/10 mb-6">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slatecharcoal mb-3">Key Deliverables &amp; Regulatory Milestones</h4>
+                    <ul id="modalProjectDeliverables" class="space-y-2 text-sm text-ink"></ul>
+                </div>
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-2">
+                    <a href="#contact-us" onclick="closeModal('projectModal')" class="w-full sm:w-auto px-6 py-3 rounded-lg bg-slatecharcoal text-white hover:bg-archgold hover:text-slatecharcoal text-xs font-semibold uppercase tracking-wider text-center transition inline-flex items-center justify-center" style="min-height:44px">Inquire About Similar Scope</a>
+                    <button onclick="closeModal('projectModal')" class="w-full sm:w-auto px-6 py-3 rounded-lg border border-slatecharcoal/20 text-slatecharcoal text-xs font-semibold uppercase tracking-wider hover:bg-sandstone transition" style="min-height:44px">Close Window</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Client Portal Login Modal -->
+    <div id="loginModal" class="fixed inset-0 z-50 hidden bg-slatecharcoal/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 shadow-2xl border border-slatecharcoal/15 relative">
+            <button onclick="closeModal('loginModal')" aria-label="Close login modal" class="absolute top-4 right-4 w-9 h-9 rounded-full hover:bg-sandstone text-slatecharcoal flex items-center justify-center transition"><i class="fa-solid fa-xmark"></i></button>
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-xl bg-slatecharcoal text-archgold flex items-center justify-center mx-auto mb-3"><i class="fa-solid fa-shield-halved text-xl"></i></div>
+                <h3 class="font-serif text-2xl font-bold text-slatecharcoal">Client &amp; Project Portal</h3>
+                <p class="text-xs text-mutedink mt-1">Access entitlement dossiers, CAD drawings, and permitting milestones.</p>
+            </div>
+            <form id="loginForm" class="space-y-4">
+                <div><label class="block text-xs font-semibold uppercase tracking-wider text-slatecharcoal mb-1.5">Client Email</label><input type="email" required placeholder="client@domain.com" class="w-full px-4 py-3 rounded-lg bg-sandstone border border-slatecharcoal/15 focus:border-archgold focus:outline-none text-sm"></div>
+                <div><label class="block text-xs font-semibold uppercase tracking-wider text-slatecharcoal mb-1.5">Access Key / Password</label><input type="password" required placeholder="••••••••••••" class="w-full px-4 py-3 rounded-lg bg-sandstone border border-slatecharcoal/15 focus:border-archgold focus:outline-none text-sm"></div>
+                <button type="submit" class="w-full py-3.5 rounded-lg bg-slatecharcoal hover:bg-archgold hover:text-slatecharcoal text-white font-semibold text-xs uppercase tracking-widest transition" style="min-height:44px">Sign In to Portal</button>
+            </form>
+            <div id="loginStatusMsg" class="hidden mt-4 p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-xs text-center">Portal access is provisioned for active project sponsors. Contact <a href="mailto:heinock4@gmail.com" class="underline font-semibold">heinock4@gmail.com</a> for credentials.</div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="fixed inset-0 z-50 hidden bg-slatecharcoal/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-8 shadow-2xl max-h-[85vh] overflow-y-auto relative">
+            <button onclick="closeModal('privacyModal')" aria-label="Close privacy modal" class="absolute top-4 right-4 w-9 h-9 rounded-full hover:bg-sandstone text-slatecharcoal flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="font-serif text-2xl font-bold text-slatecharcoal mb-4">Privacy Policy</h3>
+            <div class="space-y-3 text-sm text-mutedink leading-relaxed">
+                <p><strong>Ethiopia Urban Advisory and Building Group</strong> respects client confidentiality and data protection standards.</p>
+                <p>Information submitted through our consultation forms (name, email, parcel location, and project brief) is used strictly to evaluate advisory scope and respond to your inquiry.</p>
+                <p>Cadastral records, title documents, and architectural plans shared during due diligence remain strictly confidential and are never disclosed to unauthorized third parties.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms & Conditions Modal -->
+    <div id="termsModal" class="fixed inset-0 z-50 hidden bg-slatecharcoal/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full p-8 shadow-2xl max-h-[85vh] overflow-y-auto relative">
+            <button onclick="closeModal('termsModal')" aria-label="Close terms modal" class="absolute top-4 right-4 w-9 h-9 rounded-full hover:bg-sandstone text-slatecharcoal flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="font-serif text-2xl font-bold text-slatecharcoal mb-4">Terms &amp; Conditions</h3>
+            <div class="space-y-3 text-sm text-mutedink leading-relaxed">
+                <p>All content, architectural diagrams, planning methodologies, and case studies presented on this website are the intellectual property of <strong>Ethiopia Urban Advisory and Building Group</strong>.</p>
+                <p>Project summaries are provided for informational purposes. Formal advisory engagements, permit representations, and design deliverables are governed by executed Statements of Work (SOW).</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const projectsData = [
+            { id: 1, title: "Bole Residential & Mixed-Use Development", location: "Bole Sub-City, Addis Ababa", category: "Project Management", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80", tags: ["Sub-City Planning & Permit Approval", "ESIA Clearance", "Public Outreach", "Construction Supervision"], summary: "Guided a multi-story mixed-use residential development in Bole Sub-City from initial zoning verification through municipal building permit approval and active construction management.", deliverables: ["Bole Sub-City Planning & Building Permit Clearance", "Environmental & Social Impact Assessment (ESIA) Approval", "Neighbor & Stakeholder Public Outreach Documentation", "Full On-Site Construction Quality Control & Schedule Oversight"] },
+            { id: 2, title: "Entoto & Municipal Public Park Master Plan", location: "Gulele Sub-City, Addis Ababa", category: "Building & Landscape", image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=900&q=80", tags: ["Landscape Master Plan", "Environmental Compliance", "Civic Design", "Municipal Approval"], summary: "Comprehensive landscape master planning and ecological design for a civic recreational park, integrating native highland vegetation, pedestrian trails, and sustainable drainage.", deliverables: ["Detailed Landscape & Grading Master Plan (AutoCAD & QGIS)", "Watershed & Slope Protection Environmental Compliance Report", "Civic Pavilion & Public Amenity Architectural Design", "Municipal Parks & Urban Beautification Approval"] },
+            { id: 3, title: "Mekele Youth & Community Center", location: "Mekele, Tigray", category: "Building & Landscape", image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80", tags: ["Civic Architecture", "Construction Documentation", "Stakeholder Alignment", "On-Time Delivery"], summary: "Architectural design, technical working drawings, and construction coordination for a multi-purpose civic youth facility featuring training halls, library spaces, and outdoor courts.", deliverables: ["Full Architectural Working Drawings & Structural Coordination", "Community & Municipal Stakeholder Alignment Workshops", "Material Specification & Contractor Bid Evaluation", "Phased Construction Supervision & Handover"] },
+            { id: 4, title: "CMC / Ayat Residential Villa & Estate", location: "Yeka Sub-City, Addis Ababa", category: "Building & Landscape", image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80", tags: ["Architectural Design", "CAD/BIM Delivery", "Land Use Approval", "Landscape Integration"], summary: "Bespoke residential compound design combining contemporary Ethiopian architectural materiality, private garden courtyards, and streamlined sub-city residential permitting.", deliverables: ["Concept-to-Construction Architectural Design (ArchiCAD & AutoCAD)", "Yeka Sub-City Residential Land Use & Setback Compliance", "Custom Courtyard Landscape & Boundary Wall Detailing", "Contractor Coordination & Finishing Quality Inspection"] },
+            { id: 5, title: "Kirkos Urban Redevelopment Corridor", location: "Kirkos Sub-City, Addis Ababa", category: "Acquisition & Due Diligence", image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80", tags: ["Land Administration Due Diligence", "Spatial GIS Analysis", "Zoning Feasibility", "Regulatory Advisory"], summary: "Pre-acquisition land administration audit and spatial corridor assessment for a commercial redevelopment site within central Addis Ababa's structural plan zone.", deliverables: ["Title Deed, Lease Tenure & Encumbrance Due Diligence", "QGIS Parcel Overlay Against Addis Ababa Structural Plan", "Floor Area Ratio (FAR) & Height Zoning Feasibility Study", "Acquisition Risk Mitigation & Permitting Roadmap"] },
+            { id: 6, title: "Rift Valley Eco-Lodge & Hospitality Site", location: "Oromia Region, Ethiopia", category: "Entitlement", image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80", tags: ["Tourism Land Entitlement", "Environmental Impact Assessment", "Site Master Planning", "Permitting"], summary: "Guided regional tourism land entitlement, low-impact ecological site master planning, and environmental permitting for a lakeside hospitality retreat.", deliverables: ["Regional Investment & Tourism Land-Use Entitlement Dossier", "Lakeshore Buffer & Environmental Impact Assessment (ESIA)", "Low-Density Site Master Plan & Infrastructure Layout", "Public Consultation & Regional Authority Sign-Off"] }
+        ];
+
+        function renderProjects(filter) {
+            if (!filter) filter = 'all';
+            const grid = document.getElementById('projectsGrid');
+            const filtered = filter === 'all' ? projectsData : projectsData.filter(function(p) { return p.category === filter; });
+            grid.innerHTML = filtered.map(function(project) {
+                const tagsHtml = project.tags.map(function(tag) {
+                    return '<li class="flex items-center text-xs sm:text-sm text-mutedink"><span class="w-1.5 h-1.5 rounded-full bg-archgold mr-2.5 shrink-0"></span>' + tag + '</li>';
+                }).join('');
+                return '<article class="bg-white rounded-xl overflow-hidden border border-slatecharcoal/10 hover:border-archgold transition duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between group">'
+                    + '<div><div class="relative h-52 bg-slatecharcoal overflow-hidden">'
+                    + '<img src="' + project.image + '" onerror="this.onerror=null;this.src=\'https://placehold.co/800x500/16202A/B38B59?text=' + encodeURIComponent(project.title) + '\';" alt="' + project.title + '" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">'
+                    + '<span class="absolute top-3.5 left-3.5 px-3 py-1 rounded bg-slatecharcoal/90 text-archgoldlight text-[11px] font-bold uppercase tracking-wider">' + project.category + '</span></div>'
+                    + '<div class="p-6"><p class="text-xs font-semibold uppercase tracking-wider text-archgold mb-1"><i class="fa-solid fa-location-dot mr-1.5"></i>' + project.location + '</p>'
+                    + '<h3 class="font-serif text-xl font-bold text-slatecharcoal mb-4 group-hover:text-archgold transition">' + project.title + '</h3>'
+                    + '<ul class="space-y-2 mb-6">' + tagsHtml + '</ul></div></div>'
+                    + '<div class="px-6 pb-6 pt-3 border-t border-gray-100"><button onclick="openProjectDetails(' + project.id + ')" class="w-full py-3 rounded-lg bg-sandstone hover:bg-slatecharcoal text-slatecharcoal hover:text-white font-semibold text-xs uppercase tracking-widest transition flex items-center justify-center gap-2" style="min-height:44px">View Details <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i></button></div>'
+                    + '</article>';
+            }).join('');
+        }
+        renderProjects('all');
+
+        document.querySelectorAll('.filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(function(b) {
+                    b.classList.remove('bg-slatecharcoal', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-white', 'text-slatecharcoal', 'border', 'border-slatecharcoal/15');
+                });
+                btn.classList.remove('bg-white', 'text-slatecharcoal', 'border', 'border-slatecharcoal/15');
+                btn.classList.add('bg-slatecharcoal', 'text-white', 'shadow-sm');
+                renderProjects(btn.getAttribute('data-filter'));
+            });
+        });
+
+        function openProjectDetails(id) {
+            const project = projectsData.find(function(p) { return p.id === id; });
+            if (!project) return;
+            const img = document.getElementById('modalProjectImg');
+            img.src = project.image;
+            img.onerror = function() { this.onerror = null; this.src = 'https://placehold.co/800x500/16202A/B38B59?text=' + encodeURIComponent(project.title); };
+            document.getElementById('modalProjectCategory').textContent = project.category;
+            document.getElementById('modalProjectLocation').textContent = project.location;
+            document.getElementById('modalProjectTitle').textContent = project.title;
+            document.getElementById('modalProjectSummary').textContent = project.summary;
+            document.getElementById('modalProjectDeliverables').innerHTML = project.deliverables.map(function(item) {
+                return '<li class="flex items-start gap-2.5"><i class="fa-solid fa-check text-archgold mt-1 text-xs"></i><span>' + item + '</span></li>';
+            }).join('');
+            openModal('projectModal');
+        }
+
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; }
+        }
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) { modal.classList.add('hidden'); document.body.style.overflow = ''; }
+        }
+        window.addEventListener('click', function(e) {
+            ['projectModal', 'loginModal', 'privacyModal', 'termsModal'].forEach(function(id) {
+                const modal = document.getElementById(id);
+                if (e.target === modal) closeModal(id);
+            });
+        });
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') { ['projectModal', 'loginModal', 'privacyModal', 'termsModal'].forEach(closeModal); }
+        });
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', function() {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(function(link) {
+            link.addEventListener('click', function() { mobileMenu.classList.add('hidden'); });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('fullName').value.trim();
+            const service = document.getElementById('projectType').value;
+            const confirmation = document.getElementById('formConfirmation');
+            const confirmationText = document.getElementById('confirmationText');
+            confirmationText.textContent = 'Thank you, ' + name + '. Your inquiry regarding "' + service + '" has been logged for Ethiopia Urban Advisory and Building Group. Our Addis Ababa advisory desk will respond via email shortly.';
+            confirmation.classList.remove('hidden');
+            confirmation.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            this.reset();
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('loginStatusMsg').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
